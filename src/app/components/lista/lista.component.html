@@ -1,0 +1,35 @@
+<div class="conteiner">
+    <div class="row">
+        <div class="col">
+
+            <table class="table table-striped">
+                
+                <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">#</th>
+                      <th scope="col">Correo</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Paterno</th>
+                      <th scope="col">Materno</th>
+                      <th scope="col">Password</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    <tr *ngFor="let usuario of usuarios; let i = index">
+                      <th scope="row"><i class="fa fa-dot-circle-o"></i></th>
+                      <td>{{ i + 1}}</td>                      
+                      <td>{{ usuario.correo }}</td>
+                      <td>{{ usuario.nombre }}</td>
+                      <td>{{ usuario.paterno }}</td>
+                      <td>{{ usuario.materno }}</td>
+                      <td>{{ usuario.contrasenia }}</td>
+                    </tr>                  
+                    
+                  </tbody>
+
+              </table>
+        </div>
+    </div>
+</div>

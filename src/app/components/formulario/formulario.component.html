@@ -1,0 +1,57 @@
+<div class="conteiner" >
+
+    <form [formGroup]="form" (ngSubmit)="guardarDatos()">        
+       
+        <div class="input-group mb-3">
+            <span class="input-group-text" >
+                <i class="fa fa-envelope" 
+                [class.green-icon]="this.form.get('correo')?.valid "
+                [class.red-icon]="this.form.get('correo')?.invalid && this.form.get('correo')?.touched" ></i>
+            </span>
+            <input type="text" maxlength="32" formControlName="correo" class="form-control" placeholder="E-mail">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" >
+                <i class="fa fa-user"
+                [class.green-icon]="this.form.get('nombre')?.valid "
+                [class.red-icon]="this.form.get('nombre')?.invalid && this.form.get('nombre')?.touched" ></i>
+            </span>
+            <input type="text" maxlength="32" formControlName="nombre" class="form-control" placeholder="Nombre">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" >
+                <i class="fa fa-user-o"
+                [class.green-icon]="this.form.get('paterno')?.valid "
+                [class.red-icon]="this.form.get('paterno')?.invalid && this.form.get('paterno')?.touched" ></i>
+            </span>
+            <input type="text" maxlength="32" formControlName="paterno"  class="form-control" placeholder="Paterno">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" >
+                <i class="fa fa-user-o"></i>
+            </span>
+            <input type="text" formControlName="materno"  class="form-control" placeholder="Materno">
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" >
+                <i class="fa fa-shield"
+                [class.green-icon]="this.form.get('contrasenia')?.valid "
+                [class.red-icon]="this.form.get('contrasenia')?.invalid && this.form.get('contrasenia')?.touched" ></i>
+            </span>
+            <input type="password" maxlength="10" formControlName="contrasenia"  class="form-control" placeholder="contrasenia">
+        </div>      
+      
+    
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-success btn-lg btn-block" [disabled]="this.form.invalid" type="submit" > <i class="fa fa-database"></i> Registrar</button>
+        </div>
+    
+    </form>
+    
+
+</div>
+
